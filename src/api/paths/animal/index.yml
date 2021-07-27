@@ -1,0 +1,29 @@
+/animal/list:
+  get:
+    tags:
+      - animal
+    description: 動物一覧
+    responses:
+      '200':
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/animalSchemas/animal"
+/animal/list/{code}:
+  get:
+    tags:
+      - animal
+    description: 動物取得
+    parameters:
+      - in: path
+        name: code
+        schema:
+          type: string
+    responses:
+      '200':
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/animalSchemas/animal"

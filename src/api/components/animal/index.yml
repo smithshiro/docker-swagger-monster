@@ -1,0 +1,2 @@
+animal:
+  $ref: "./parts/animal.yml"

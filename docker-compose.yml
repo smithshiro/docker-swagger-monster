@@ -1,0 +1,17 @@
+version: '3'
+services:
+  swagger-merger:
+    build:
+      context: ./docker/swagger-merger
+      dockerfile: Dockerfile
+    working_dir: "/work"
+    volumes:
+      - "./src:/work"
+  redoc:
+    image: redocly/redoc
+    ports:
+      - "18080:80"
+    volumes:
+      - "./src:/usr/share/nginx/html/src"
+    environment:
+      SPEC_URL: ./src/api/swagger.yml

@@ -1,0 +1,8 @@
+type: object
+properties:
+  animal_name:
+    type: string
+    description: 動物の名前
+  animal_code:
+    type: string
+    description: 動物コード

@@ -1,0 +1,15 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "swagger-merger",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "merge": "swagger-merger --debug -i ./api/index.yml -o ./api/swagger.yml",
+    "watch": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
